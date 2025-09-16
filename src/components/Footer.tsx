@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
 
 
-          {/* Solutions */}
+          {/* Solutions */} 
           <div>
             <h3 className="font-semibold text-lg mb-4">Solutions</h3>
             <ul className="space-y-3 text-background/70">
