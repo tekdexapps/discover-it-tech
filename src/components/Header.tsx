@@ -23,26 +23,26 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-smooth font-medium">
+            <a href="/#home" className="text-foreground hover:text-primary transition-smooth font-medium">
               Home
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-smooth font-medium">
+            <a href="/#services" className="text-foreground hover:text-primary transition-smooth font-medium">
               Services
             </a>
-            <a href="#solutions" className="text-foreground hover:text-primary transition-smooth font-medium">
-              Solutions
+            <a href="/careers" className="text-foreground hover:text-primary transition-smooth font-medium">
+              Careers
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-smooth font-medium">
+            <a href="/#contact" className="text-foreground hover:text-primary transition-smooth font-medium">
               Contact
             </a>
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Button className="premium-gradient shadow-premium hover:shadow-glow transition-smooth">
               Get Started
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

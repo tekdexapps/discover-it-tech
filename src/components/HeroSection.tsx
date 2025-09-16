@@ -131,19 +131,20 @@ const HeroSection = () => {
               variant="premium"
               size="lg" 
               className="group shadow-glow hover:shadow-premium transition-all duration-300"
+              onClick={() => { window.location.href = '#contact'; }}
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button 
+            {/* <Button 
               variant="glass" 
               size="lg"
               className="transition-all duration-300 group hover:scale-105"
             >
               <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               Watch Demo
-            </Button>
+            </Button> */}
           </div>
           
         </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -8,55 +9,92 @@ import {
   BarChart3, 
   Shield,
   ArrowRight,
-  Zap
+  Zap,
+  Headphones,
+  Users,
+  Cpu,
+  Globe
 } from "lucide-react";
 
 const services = [
   {
-    icon: Cloud,
-    title: "DevOps & Cloud",
-    description: "Transform your software development and IT operations with our comprehensive DevOps services. Achieve faster delivery and continuous improvement.",
-    color: "text-blue-500",
-    bgColor: "bg-blue-500/10",
+    "icon": Smartphone,
+    "title": "Mobile App Development",
+    "description": "Native and cross-platform mobile applications for iOS and Android. User-centric design with seamless performance and offline capabilities.",
+    "color": "text-pink-500",
+    "bgColor": "bg-pink-500/10"
   },
   {
-    icon: Code,
-    title: "Custom Software Development",
-    description: "Build tailored software solutions that perfectly fit your business needs. From web applications to enterprise systems.",
-    color: "text-green-500",
-    bgColor: "bg-green-500/10",
+    "icon": BarChart3,
+    "title": "Data Analytics & Business Intelligence",
+    "description": "Advanced data analytics, Power BI, and Tableau solutions. Transform raw data into actionable insights and interactive dashboards for strategic decision-making.",
+    "color": "text-orange-500",
+    "bgColor": "bg-orange-500/10"
   },
   {
-    icon: Database,
-    title: "ERP Solutions",
-    description: "Streamline your business processes with integrated ERP systems that enhance efficiency and provide real-time insights.",
-    color: "text-purple-500",
-    bgColor: "bg-purple-500/10",
+    "icon": Shield,
+    "title": "Cybersecurity & Compliance",
+    "description": "Comprehensive security assessments, vulnerability management, and compliance frameworks (ISO, GDPR, HIPAA). Protect your digital assets and customer data.",
+    "color": "text-red-500",
+    "bgColor": "bg-red-500/10"
   },
   {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    description: "Create engaging mobile experiences with native and cross-platform applications that connect with your users.",
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10",
+    "icon": Globe,
+    "title": "Web Development & E-commerce",
+    "description": "Responsive websites and robust e-commerce platforms. SEO-optimized, high-performance web solutions with seamless payment integrations.",
+    "color": "text-cyan-500",
+    "bgColor": "bg-cyan-500/10"
   },
   {
-    icon: BarChart3,
-    title: "Business Intelligence",
-    description: "Turn your data into actionable insights with advanced analytics, Power BI, and Tableau implementations.",
-    color: "text-orange-500",
-    bgColor: "bg-orange-500/10",
+    "icon": Cpu,
+    "title": "AI & Machine Learning",
+    "description": "Intelligent solutions powered by artificial intelligence and machine learning. Predictive analytics, natural language processing, and computer vision applications.",
+    "color": "text-indigo-500",
+    "bgColor": "bg-indigo-500/10"
   },
   {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Protect your digital assets with comprehensive security solutions and compliance frameworks.",
-    color: "text-red-500",
-    bgColor: "bg-red-500/10",
+    "icon": Cloud,
+    "title": "DevOps & Cloud Solutions",
+    "description": "End-to-end DevOps implementation and cloud migration services. We automate workflows, optimize infrastructure, and ensure scalable cloud deployments on AWS, Azure, and GCP.",
+    "color": "text-blue-500",
+    "bgColor": "bg-blue-500/10"
   },
+  {
+    "icon": Code,
+    "title": "Custom Software Development",
+    "description": "Full-stack development of bespoke applications tailored to your unique business requirements. From MVP to enterprise-grade systems with modern tech stacks.",
+    "color": "text-green-500",
+    "bgColor": "bg-green-500/10"
+  },
+  {
+    "icon": Database,
+    "title": "ERP & Business Automation",
+    "description": "Comprehensive ERP implementation and business process automation. Integrate operations, finance, HR, and supply chain into a unified system for real-time decision making.",
+    "color": "text-purple-500",
+    "bgColor": "bg-purple-500/10"
+  },
+  {
+    "icon": Users,
+    "title": "IT Consulting & Digital Transformation",
+    "description": "Strategic technology consulting to drive digital transformation. Technology assessment, roadmap development, and digital innovation strategies.",
+    "color": "text-teal-500",
+    "bgColor": "bg-teal-500/10"
+  },
+  {
+    "icon": Headphones,
+    "title": "24/7 IT Support & Managed Services",
+    "description": "Round-the-clock technical support and managed IT services. Proactive monitoring, maintenance, and rapid issue resolution for business continuity.",
+    "color": "text-amber-500",
+    "bgColor": "bg-amber-500/10"
+  }
 ];
 
 const ServicesSection = () => {
+  const [showAllServices, setShowAllServices] = useState(false);
+  
+  // Show only first 3 services initially, or all if showAllServices is true
+  const displayedServices = showAllServices ? services : services.slice(0, 3);
+
   return (
     <section id="services" className="py-12 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-6">
@@ -78,7 +116,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {displayedServices.map((service, index) => (
             <Card 
               key={index} 
               className="card-gradient border-0 shadow-card hover:shadow-elegant transition-smooth group cursor-pointer overflow-hidden fade-in-up"
@@ -96,26 +134,38 @@ const ServicesSection = () => {
                 <CardDescription className="text-base mb-6 leading-relaxed">
                   {service.description}
                 </CardDescription>
-                <Button 
+                {/* <Button 
                   variant="ghost" 
                   className="p-0 text-primary hover:text-primary-glow group/btn"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="text-center mt-16">
-          <Button 
-            size="lg" 
-            className="hero-gradient shadow-elegant hover:shadow-glow transition-smooth"
-          >
-            View All Services
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          {!showAllServices ? (
+            <Button 
+              size="lg" 
+              className="hero-gradient shadow-elegant hover:shadow-glow transition-smooth"
+              onClick={() => setShowAllServices(true)}
+            >
+              View More Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          ) : (
+            <Button 
+              size="lg" 
+              className="hero-gradient shadow-elegant hover:shadow-glow transition-smooth"
+              onClick={() => setShowAllServices(false)}
+            >
+              View Less Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          )}
         </div>
       </div>
     </section>
