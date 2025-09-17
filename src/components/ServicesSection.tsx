@@ -13,10 +13,19 @@ import {
   Headphones,
   Users,
   Cpu,
-  Globe
+  Globe,
+  Cog
+  
 } from "lucide-react";
 
 const services = [
+  {
+"icon": Cog,
+"title": "ServiceNow Development & Integration",
+"description": "End-to-end implementation, customization, and integration of the ServiceNow platform. Streamline IT service management (ITSM), customer service (CSM), and business workflows with automated, enterprise-grade solutions.",
+"color": "text-blue-600",
+"bgColor": "bg-blue-600/10"
+},
   {
     "icon": Smartphone,
     "title": "Mobile App Development",
