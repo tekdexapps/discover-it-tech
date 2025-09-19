@@ -219,7 +219,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium">Call Us</p>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+1 (929) 248 1117</p>
                 </div>
               </div>
               
@@ -230,8 +230,8 @@ const ContactSection = () => {
                 <div>
                   <p className="font-medium">Visit Us</p>
                   <p className="text-muted-foreground">
-                    123 Innovation Drive<br />
-                    Tech Valley, CA 94025
+                    10026 canopy Tree Court <br />
+                    Orlando FL 32836
                   </p>
                 </div>
               </div>
