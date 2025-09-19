@@ -58,7 +58,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email notification to business
     const businessEmailResponse = await resend.emails.send({
       from: "TechFlow Contact <onboarding@resend.dev>",
-      to: ["hr@discoverittech.com"], // Replace with your actual business email
+      to: ["info@discoverittech.com"], // Replace with your actual business email
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
         <h2>New Contact Form Submission</h2>
