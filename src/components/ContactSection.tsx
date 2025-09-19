@@ -209,7 +209,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium">Email Us</p>
-                  <p className="text-muted-foreground">hello@techflow.com</p>
+                  <p className="text-muted-foreground">hr@discoverittech.com</p>
                 </div>
               </div>
               

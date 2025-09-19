@@ -4,13 +4,11 @@ import { Button } from "@/components/ui/button";
 import { 
   Cloud, 
   Code, 
-  Database, 
   Smartphone, 
   BarChart3, 
   Shield,
   ArrowRight,
   Zap,
-  Headphones,
   Users,
   Cpu,
   Globe,
@@ -21,7 +19,7 @@ import {
 const services = [
   {
 "icon": Cog,
-"title": "ServiceNow Development & Integration",
+"title": "ServiceNow",
 "description": "End-to-end implementation, customization, and integration of the ServiceNow platform. Streamline IT service management (ITSM), customer service (CSM), and business workflows with automated, enterprise-grade solutions.",
 "color": "text-blue-600",
 "bgColor": "bg-blue-600/10"
@@ -76,26 +74,12 @@ const services = [
     "bgColor": "bg-green-500/10"
   },
   {
-    "icon": Database,
-    "title": "ERP & Business Automation",
-    "description": "Comprehensive ERP implementation and business process automation. Integrate operations, finance, HR, and supply chain into a unified system for real-time decision making.",
-    "color": "text-purple-500",
-    "bgColor": "bg-purple-500/10"
-  },
-  {
     "icon": Users,
     "title": "IT Consulting & Digital Transformation",
     "description": "Strategic technology consulting to drive digital transformation. Technology assessment, roadmap development, and digital innovation strategies.",
     "color": "text-teal-500",
     "bgColor": "bg-teal-500/10"
   },
-  {
-    "icon": Headphones,
-    "title": "24/7 IT Support & Managed Services",
-    "description": "Round-the-clock technical support and managed IT services. Proactive monitoring, maintenance, and rapid issue resolution for business continuity.",
-    "color": "text-amber-500",
-    "bgColor": "bg-amber-500/10"
-  }
 ];
 
 const ServicesSection = () => {
