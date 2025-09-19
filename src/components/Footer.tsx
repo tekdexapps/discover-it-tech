@@ -77,9 +77,9 @@ const Footer = () => {
             ©2025 Discover IT Tech. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-background/70 hover:text-primary transition-colors text-sm">
+            {/* <a href="#" className="text-background/70 hover:text-primary transition-colors text-sm">
               Privacy Policy
-            </a>
+            </a> */}
             {/* <a href="#" className="text-background/70 hover:text-primary transition-colors text-sm">
               Terms of Service
             </a>
