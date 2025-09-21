@@ -223,7 +223,7 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4 fade-in-up stagger-3">
+{/*               <div className="flex items-center space-x-4 fade-in-up stagger-3">
                 <div className="bg-green-500/10 p-3 rounded-xl">
                   <MapPin className="h-6 w-6 text-green-500" />
                 </div>
@@ -234,7 +234,7 @@ const ContactSection = () => {
                     Orlando FL 32836
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-2xl fade-in-up stagger-4">
